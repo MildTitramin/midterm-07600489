@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPEED CALCULATOR</string>
+    <string name="meter">กรอกระยะทาง(เมตร)</string>
+    <string name="second">กรอกเวลา(วินาที)</string>
+    <string name="clear">ล้าง</string>
+    <string name="cal">คำนวณ</string>
+    <string name="Average">ความเร็วเฉลี่ย(กม./ชม.)</string>
+    <string name="speedisover">ความเร็วเกินกำหนด!</string>
+    <string name="D">ต้องกรอกระยะทางและเวลา</string>
+    <string name="T">เวลาต้องมากกว่าศูนย์</string>
+</resources>

@@ -4,30 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="244dp"
-        android:layout_height="340dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintDimensionRatio="1000:625"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/speed_meter" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="191dp"
-        android:layout_height="198dp"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SPEED CALCULATOR"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/red_cow" />
+        app:layout_constraintVertical_bias="0.073" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="87dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toStartOf="@+id/cal"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/second"
+        app:layout_constraintTop_toBottomOf="@+id/second" />
+
+    <Button
+        android:id="@+id/cal"
+        android:layout_width="101dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:text="@string/cal"
+        app:layout_constraintEnd_toEndOf="@+id/second"
+        app:layout_constraintStart_toEndOf="@+id/clear"
+        app:layout_constraintTop_toBottomOf="@+id/second" />
+
+    <TextView
+        android:id="@+id/Average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/Average"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/cal"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/clear"
+        app:layout_constraintTop_toBottomOf="@+id/clear" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="243dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Average"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/Average"
+        app:layout_constraintTop_toBottomOf="@+id/Average"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <EditText
+        android:id="@+id/meter"
+        android:layout_width="251dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="52dp"
+        android:background="#E6E6E6"
+        android:ems="10"
+        android:hint="@string/meter"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/second"
+        android:layout_width="251dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="8dp"
+        android:background="#E6E6E6"
+        android:ems="10"
+        android:hint="@string/second"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/meter"
+        app:layout_constraintStart_toStartOf="@+id/meter"
+        app:layout_constraintTop_toBottomOf="@+id/meter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
